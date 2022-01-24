@@ -363,9 +363,9 @@ class MobileTwitter {
                             !element.ext_has_nft_avatar
                             || element.screen_name in protectedUsers) {
                             scratch_usersSkipped++;
-                            return false;
+                            return true;
                         }
-                        return true;
+                        return false;
                     })
                     .filter((element) => {
                         if (element.blocking) {
